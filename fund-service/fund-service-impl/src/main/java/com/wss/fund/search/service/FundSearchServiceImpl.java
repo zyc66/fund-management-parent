@@ -4,7 +4,9 @@ import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
 import com.wss.fund.constants.FundSearchConstant;
+import com.wss.fund.search.dto.FundBaseInfo;
 import com.wss.fund.search.dto.FundDTO;
 import com.wss.fund.utils.HttpUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,10 +28,9 @@ public class FundSearchServiceImpl implements FundSearchService {
         ObjectMapper objectMapper = new ObjectMapper();
 
         // 将 Java 对象转换为 JSON 字符串
-        String jsonString = objectMapper.writeValueAsString(datas.getStr(0));
-        System.out.println(jsonString);
-
+//        String jsonString = objectMapper.writeValueAsString(datas.getStr(0));
         // 将 JSON 字符串转换为 Java 对象
-        return objectMapper.readValue(jsonString, FundDTO.class);
+
+        return objectMapper.readValue(datas.getStr(0), FundDTO.class);
     }
 }

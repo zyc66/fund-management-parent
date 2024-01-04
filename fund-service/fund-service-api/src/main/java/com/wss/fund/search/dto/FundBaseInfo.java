@@ -22,6 +22,11 @@ public class FundBaseInfo{
 	@JsonProperty("FTYPE")
 	private String fundType;
 	/**
+	 * 基金类型
+	 */
+	@JsonProperty("RSFUNDTYPE")
+	private String rsFundType;
+	/**
 	 * 基金经理ID
 	 */
 	@JsonProperty("JJJLID")
