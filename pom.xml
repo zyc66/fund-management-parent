@@ -25,6 +25,7 @@
         <module>config-center</module>
         <module>fund-service/fund-service-api</module>
         <module>fund-service/fund-service-impl</module>
+        <module>ocr-service</module>
     </modules>
 <dependencies>
     <dependency>
